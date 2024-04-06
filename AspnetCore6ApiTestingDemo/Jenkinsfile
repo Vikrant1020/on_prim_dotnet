@@ -1,4 +1,4 @@
-pipeline {
+    pipeline {
     agent any
     
     // environment {
@@ -17,7 +17,7 @@ pipeline {
         
         stage('dotnet deploy') {      	
             steps{                       	
-            	sh 'cd AspnetCore6ApiTestingDemo && sudo docker-compose up --build -d'
+            	sh 'cd AspnetCore6ApiTestingDemo && sudo chmod +x /usr/local/bin/docker-compose && sudo docker-compose up --build -d'
                 
                 sh 'docker-compose up --build -d'      		
             	echo 'docker container build and deployed '      
