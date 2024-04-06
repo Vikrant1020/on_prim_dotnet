@@ -18,6 +18,7 @@ pipeline {
         stage('dotnet deploy') {      	
             steps{                       	
             	sh 'cd AspnetCore6ApiTestingDemo'
+                sh 'ls'
                 sh 'docker-compose up --build -d'      		
             	echo 'docker container build and deployed '      
             }           
