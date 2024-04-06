@@ -17,7 +17,7 @@ pipeline {
         
         stage('dotnet deploy') {      	
             steps{                       	
-            	sh 'cd AspnetCore6ApiTestingDemo'
+            	cd AspnetCore6ApiTestingDemo
                 sh 'ls && pwd'
             	sh 'cd AspnetCore6ApiTestingDemo'
                 sh 'ls && pwd'
